@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HobbyMate</string>
+    <string name="home_title">Discover</string>
+    <string name="home_recommended">Recommended</string>
+    <string name="home_viewall">View All</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
