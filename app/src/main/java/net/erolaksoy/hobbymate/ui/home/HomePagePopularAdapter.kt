@@ -6,14 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import net.erolaksoy.hobbymate.databinding.PopularRecyclerCarditemBinding
+import net.erolaksoy.hobbymate.databinding.PopularlistItemBinding
+import java.util.*
 
 class HomePagePopularAdapter(var list: ArrayList<String>) :
     RecyclerView.Adapter<HomePageViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomePageViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val itemBinding = PopularRecyclerCarditemBinding.inflate(layoutInflater)
+        val itemBinding = PopularlistItemBinding.inflate(layoutInflater)
         return HomePageViewHolder(itemBinding)
     }
 
@@ -27,10 +28,10 @@ class HomePagePopularAdapter(var list: ArrayList<String>) :
     }
 }
 
-class HomePageViewHolder(private val binding: PopularRecyclerCarditemBinding) :
+class HomePageViewHolder(private val binding: PopularlistItemBinding) :
     RecyclerView.ViewHolder(binding.root) {
-    val imgview = binding.heartIcon
+    //val imgview = binding.heartIcon
     fun bind(item: String) {
-        binding.contentText.text = item
+     //   binding.contentText.text = item
     }
 }

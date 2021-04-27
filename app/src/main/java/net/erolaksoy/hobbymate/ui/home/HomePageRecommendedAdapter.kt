@@ -3,13 +3,14 @@ package net.erolaksoy.hobbymate.ui.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import net.erolaksoy.hobbymate.databinding.RecommendedRecyclerCarditemBinding
+import net.erolaksoy.hobbymate.databinding.RecommendedlistItemBinding
+import java.util.*
 
-class HomePageRecommendedAdapter(val list : ArrayList<String>) : RecyclerView.Adapter<RecommendedViewHolder>()
-{
+class HomePageRecommendedAdapter(private val list: ArrayList<String>) :
+    RecyclerView.Adapter<RecommendedViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecommendedViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val itemBinding = RecommendedRecyclerCarditemBinding.inflate(inflater)
+        val itemBinding = RecommendedlistItemBinding.inflate(inflater)
         return RecommendedViewHolder(itemBinding)
     }
 
@@ -21,10 +22,11 @@ class HomePageRecommendedAdapter(val list : ArrayList<String>) : RecyclerView.Ad
     override fun getItemCount(): Int {
         return list.size
     }
-
 }
-class RecommendedViewHolder(val binding : RecommendedRecyclerCarditemBinding) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(item : String){
+
+class RecommendedViewHolder(private val binding: RecommendedlistItemBinding) :
+    RecyclerView.ViewHolder(binding.root) {
+    fun bind(item: String) {
         binding.contentText.text = item
     }
 }

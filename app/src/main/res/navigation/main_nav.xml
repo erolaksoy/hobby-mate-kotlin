@@ -10,4 +10,9 @@
         android:name="net.erolaksoy.hobbymate.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="net.erolaksoy.hobbymate.ui.second.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
 </navigation>
