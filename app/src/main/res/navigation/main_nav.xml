@@ -15,4 +15,8 @@
         android:name="net.erolaksoy.hobbymate.ui.second.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="net.erolaksoy.hobbymate.MainActivity"
+        android:label="MainActivity" />
 </navigation>
