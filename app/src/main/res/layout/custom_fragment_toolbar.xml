@@ -10,11 +10,11 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/menuIcon"
+            android:id="@+id/backButtonIcon"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="start|center"
-            android:src="@drawable/menu_ico" />
+            android:src="@drawable/ic_back_24dp" />
 
         <TextView
             android:id="@+id/screenTitle"
