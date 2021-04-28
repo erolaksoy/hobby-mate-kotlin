@@ -1,6 +1,8 @@
 package net.erolaksoy.hobbymate
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.Gravity
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
@@ -32,15 +34,19 @@ class MainActivity : AppCompatActivity() {
         )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-
-        binding.toolbar.menuIcon.setOnClickListener { binding.drawerLayout.open() }
+        //binding.toolbar.menuIcon.setOnClickListener { binding.drawerLayout.open() }
         NavigationUI.setupWithNavController(binding.navigationView, navController)
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
-
-
         //supportActionBar
         // supportActionBar?.setDisplayHomeAsUpEnabled(true)
         // supportActionBar?.setHomeButtonEnabled(true)
+
+    }
+
+
+    @SuppressLint("WrongConstant")
+    fun openDrawerMenu() {
+        binding.drawerLayout.openDrawer(Gravity.START)
     }
 
     //region onOptionsItemSelected, onSupportNavigateUp function override examples
