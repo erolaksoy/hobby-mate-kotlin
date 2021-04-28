@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/homeFragment" android:title="Home" android:icon="@drawable/home_ico"/>
-<item android:id="@+id/secondFragment" android:title="Calendar" android:icon="@drawable/calendar_ico"/>
-<item android:id="@+id/item3" android:title="Calendar" android:icon="@drawable/search_ico"/>
-<item android:id="@+id/item4" android:title="Calendar" android:icon="@drawable/user_ico"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/home_ico"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/secondFragment"
+        android:title="Calendar"
+        android:icon="@drawable/calendar_ico"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item3"
+        android:title="Calendar"
+        android:icon="@drawable/search_ico"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item4"
+        android:title="Calendar"
+        android:icon="@drawable/user_ico"
+        app:showAsAction="ifRoom" />
 </menu>

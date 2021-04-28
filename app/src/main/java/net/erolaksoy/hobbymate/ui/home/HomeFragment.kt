@@ -33,6 +33,7 @@ class HomeFragment : Fragment() {
         binding.recommendedRecyclerView.layoutManager =
             GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
         binding.recommendedRecyclerView.adapter = HomePageRecommendedAdapter(list)
+
         return binding.root
     }
 

@@ -7,7 +7,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import net.erolaksoy.hobbymate.databinding.ActivityMainBinding
 
@@ -16,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(this.layoutInflater) }
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var navController: NavController
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var drawerLayout: DrawerLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         toggle.syncState()
         binding.toolbar.menuIcon.setOnClickListener { binding.drawerLayout.open() }
         NavigationUI.setupWithNavController(binding.navigationView, navController)
+        NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
+
 
         //supportActionBar
         // supportActionBar?.setDisplayHomeAsUpEnabled(true)
