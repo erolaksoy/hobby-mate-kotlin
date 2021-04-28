@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI
 import net.erolaksoy.hobbymate.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var toggle: ActionBarDrawerToggle
     private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(this.layoutInflater) }
     private lateinit var navHostFragment: NavHostFragment
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
         binding.toolbar.menuIcon.setOnClickListener { binding.drawerLayout.open() }
         NavigationUI.setupWithNavController(binding.navigationView, navController)
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
