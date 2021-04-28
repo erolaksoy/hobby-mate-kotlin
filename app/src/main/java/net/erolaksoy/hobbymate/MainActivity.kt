@@ -28,35 +28,38 @@ class MainActivity : AppCompatActivity() {
         toggle = ActionBarDrawerToggle(
             this,
             binding.drawerLayout,
-            R.string.bottom_sheet_behavior,
-            R.string.app_name
+            R.string.drawer_open_menu,
+            R.string.drawer_close_menu
         )
-
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//        supportActionBar?.setHomeButtonEnabled(true)
         binding.toolbar.menuIcon.setOnClickListener { binding.drawerLayout.open() }
         NavigationUI.setupWithNavController(binding.navigationView, navController)
+
+        //supportActionBar
+        // supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // supportActionBar?.setHomeButtonEnabled(true)
     }
 
+    //region onOptionsItemSelected, onSupportNavigateUp function override examples
 //    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 //        return super.onOptionsItemSelected(item)
 //        // TODO STEP 9.2 - Have Navigation UI Handle the item selection - make sure to delete
 //        //  the old return statement above
-////        // Have the NavigationUI look for an action or destination matching the menu
-////        // item id and navigate there if found.
-////        // Otherwise, bubble up to the parent.
+//        // Have the NavigationUI look for an action or destination matching the menu
+//       // item id and navigate there if found.
+///       // Otherwise, bubble up to the parent.
 //        return item.onNavDestinationSelected(findNavController(R.id.navHostFragment))
 //                || super.onOptionsItemSelected(item)
 //        // TODO END STEP 9.2
 //    }
 //
 //    override fun onSupportNavigateUp(): Boolean {
-////        // Allows NavigationUI to support proper up navigation or the drawer layout
-////        // drawer menu, depending on the situation
+//       // Allows NavigationUI to support proper up navigation or the drawer layout
+//        // drawer menu, depending on the situation
 //        return findNavController(R.id.navHostFragment).navigateUp(appBarConfiguration)
 //  }
+//endregion
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.navHostFragment)
